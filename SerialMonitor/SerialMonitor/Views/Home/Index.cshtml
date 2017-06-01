@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <h2>Serial Monitor</h2>
+
+    <input type="text" îd="input" />
+    <input type="button" id="send" value="send" />
+
+    <ul id="data"></ul>
+</div>
+
+
+@section Scripts{
+    <script src="~/Scripts/sync.js"></script>
+    <script src="~/Scripts/message.js"></script>
+    <script type="text/javascript">
+        SerialMonitor.Message.init("#send", "#data", "#input");
+    </script>
+    }
